@@ -1,0 +1,56 @@
+.RandomsSpirits {
+
+}
+
+.RandomsSpirits .title{
+  color: #C8AE78;
+  font-family: Mantinia;
+  font-size: 3.2rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-transform: uppercase;
+
+  text-align: center;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+  padding-bottom: 30px;
+}
+
+.RandomsSpirits .container-spirits {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+}
+
+.RandomsSpirits .container-spirits .add-spirit {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border-color: white;
+  background: rgba(255, 255, 255, 0.10);
+  backdrop-filter: blur(1.2999999523162842px);
+  background-image: url(../../../public/+.png);
+  background-repeat: no-repeat;
+  background-position: center;
+
+  position: absolute;
+  left: 0;
+  bottom: -50px;
+  cursor: pointer;
+}
+
+.RandomsSpirits .container-spirits button:active {
+  background-color: rgba(255, 255, 255, 0.267);
+}
+
+.RandomsSpirits .container-spirits .button-container {
+  position: relative;
+}
+
+/*
+.RandomsSpirits .container-spirits button.full {
+  display: none;
+}
+  */

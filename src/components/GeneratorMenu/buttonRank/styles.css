@@ -1,0 +1,72 @@
+.button {
+  width: 60px;
+  height: 60px;
+  background-color: red;
+  border-radius: 29.62px;
+
+  color: #FFF;
+  text-align: center;
+  font-family: "Andada Pro";
+  font-size: 32.911px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+
+  --red: linear-gradient(134deg, #FF5554 17.71%, #9E5D5C 85.77%);
+  --orange: linear-gradient(134deg, #FFBF7F 17.71%, #9E7C5C 85.77%);
+  --yellow: linear-gradient(134deg, #FEFF7F 17.71%, #9E985C 85.77%);
+  --green: linear-gradient(134deg, #7EFF80 17.71%, #5C9E73 85.77%);
+  --blue: linear-gradient(134deg, #7FFFFF 17.71%, #5C9E9E 85.77%);
+    box-shadow: 1.646px 3.291px 3.291px 0.823px #000;
+    filter: brightness(0.5)
+}
+
+#S {
+  background: var(--red);
+}
+#A {
+  background: var(--orange);
+}
+#B{
+  background: var(--yellow);
+}
+#C {
+  background: var(--green);
+}
+#D {
+  background: var(--blue);
+}
+
+
+#S.active  {
+  box-shadow: 0 0 5px #FF5554, 0 0 20px #FF5554, 0 0 10px #FF5554 ,
+    0 0 100px #FF5554;
+}
+#A.active  {
+  box-shadow: 0 0 5px #FFBF7F, 0 0 20px #FFBF7F, 0 0 10px #FFBF7F ,
+    0 0 100px #FFBF7F !important;
+}
+#B.active {
+  box-shadow: 0 0 5px #FEFF7F, 0 0 20px #FEFF7F, 0 0 10px #FEFF7F ,
+    0 0 100px #FEFF7F !important;
+}
+#C.active  {
+  box-shadow: 0 0 5px #7EFF80, 0 0 20px #7EFF80, 0 0 10px #7EFF80 ,
+    0 0 100px #7EFF80 !important;
+}
+#D.active  {
+  box-shadow: 0 0 5px #7FFFFF, 0 0 20px #7FFFFF, 0 0 10px #7FFFFF ,
+    0 0 100px #7FFFFF !important;
+}
+
+.button.active {
+  transform: translateY(5px);
+  filter: brightness(1)
+}

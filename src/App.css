@@ -1,0 +1,32 @@
+.App {
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+}
+
+.App .logo {
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+}
+
+.App .logo h1 {
+  font-size: 1.8rem;
+  font-style: normal;
+  line-height: normal; 
+  font-weight: 500;
+  text-transform: uppercase;
+  line-height: 0.2rem;
+  text-shadow: 0px 6.737px 6.737px rgba(0, 0, 0, 0.46);
+}
+
+.App .logo h2 {
+  font-size: 4.2rem;
+  font-style: normal;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-shadow: 0px 6.737px 6.737px rgba(0, 0, 0, 0.46);
+}
+
+.App .logo span {
+  font-size: 5rem;
+}
