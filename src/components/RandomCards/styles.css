@@ -62,7 +62,7 @@
   position: relative;
 }
 
-div + .RandomCards .options-card  .close {
+div + .RandomCards:nth-last-child(2) .options-card  .close {
   display: block;
 }
 
