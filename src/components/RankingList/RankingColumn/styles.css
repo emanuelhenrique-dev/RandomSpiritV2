@@ -1,0 +1,60 @@
+.RankingColumn {
+  width: 100%;
+  height: fit-content;
+  border: 5px solid #52514D;
+  background: linear-gradient(90deg, #25261F 80%, #5A5B4E 100%);
+  display: flex;
+  justify-content: flex-start;  
+  padding-block: 5px;
+}
+
+.RankingColumn .rank {
+  min-width: 140px;
+  height: 100%;
+  background-color: red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ranking-list {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  padding-inline: 5px;
+}
+
+
+.RankingColumn .rank h3 {
+  color: #C8AE78;
+  text-align: center;
+  text-shadow: 0px 9.895px 9.895px rgba(0, 0, 0, 0.87);
+  font-family: Mantinia;
+  font-size: 80px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.RankingColumn .rank.S {
+  background: var(--red, linear-gradient(134deg, #FF5554 17.71%, #9E5D5C 85.77%));
+}
+.RankingColumn .rank.A {
+  background: var(--laranja, linear-gradient(134deg, #FFBF7F 17.71%, #9E7C5C 85.77%));
+}
+.RankingColumn .rank.B {
+  background: var(--amarelo, linear-gradient(134deg, #FEFF7F 17.71%, #9E985C 85.77%));
+}
+.RankingColumn .rank.C {
+  background: var(--verde, linear-gradient(134deg, #7EFF80 17.71%, #5C9E73 85.77%));
+}
+.RankingColumn .rank.D {
+  background: var(--azul, linear-gradient(134deg, #7FFFFF 17.71%, #5C9E9E 85.77%));
+}
+
+

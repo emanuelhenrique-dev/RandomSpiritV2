@@ -4,6 +4,22 @@
   text-align: center;
 }
 
+.App::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0);
+  pointer-events: none;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.App.listOpen::after {
+  background: rgba(0, 0, 0, 0.5);
+}
+
 .App .logo {
   padding-top: 1rem;
   padding-bottom: 2rem;

@@ -22,6 +22,6 @@ body {
   background: url(../assets/background.png);
   background-color: black;
   background-size: cover;
-  background-repeat: no-repeat;
+  overflow: hidden;
 }
 

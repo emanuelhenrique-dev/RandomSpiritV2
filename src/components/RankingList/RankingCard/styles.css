@@ -1,0 +1,38 @@
+.RankingCard {
+  width: 108px;
+  height: 120px;
+  cursor: grab;
+}
+
+.RankingCard img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+.RankingColumn .rank.S + .ranking-list .RankingCard{
+  border-radius: 7px;
+  border-top: 2px solid var(--red, #FF5554);
+  border-bottom: 2px solid var(--red, #FF5554);
+}
+.RankingColumn .rank.A + .ranking-list .RankingCard{
+  border-radius: 7px;
+  border-top: 2px solid var(--laranja, #FFBF7F);
+  border-bottom: 2px solid var(--laranja, #FFBF7F);
+}
+.RankingColumn .rank.B + .ranking-list .RankingCard{
+  border-radius: 7px;
+  border-top: 2px solid var(--amarelo, #FEFF7F);
+  border-bottom: 2px solid var(--amarelo, #FEFF7F);
+}
+.RankingColumn .rank.C + .ranking-list .RankingCard{
+  border-radius: 7px;
+  border-top: 2px solid var(--verde, #7EFF80);
+  border-bottom: 2px solid var(--verde, #7EFF80);
+}
+.RankingColumn .rank.D + .ranking-list .RankingCard{
+  border-radius: 7px;
+  border-top: 2px solid var(--azul, #7FFFFF);
+  border-bottom: 2px solid var(--azul, #7FFFFF);
+}

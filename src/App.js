@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { backmusic } from './assets/assets';
 import { GeneratorMenu } from './components/GeneratorMenu';
 import { RandomsSpirits } from './components/RandomsSpirits';
+import { RankingList } from './components/RankingList';
 import { Smoke } from './components/Smoke';
 import { loadLists } from './util/spiritList';
 
@@ -15,6 +16,7 @@ export function App() {
   const [dlcActive, setDlcActive] = useState(0);
   const [selectedButtons, setSelectedButtons] = useState(['A']);
   const [lists, setLists] = useState(data);
+  const [rankOpen, setRankOpen] = useState(false);
 
   //Gerar um spirit aleatório e filtrando
   const generatorSpirit = () => {
@@ -43,8 +45,17 @@ export function App() {
     return filteredList[randomIndex];
   };
 
+  const closeList = (e) => {
+    if (!e.target.className.includes('RankingList') && rankOpen) {
+      //setRankOpen(false);
+    }
+  };
+
   return (
-    <div className="App">
+    <div
+      className={!rankOpen ? 'App' : 'App listOpen'}
+      onClick={(e) => closeList(e)}
+    >
       <div className="logo">
         <h2>
           <span>E</span>lden rin<span>G</span>
@@ -62,11 +73,18 @@ export function App() {
         dlcActive={dlcActive}
         generatorSpirit={generatorSpirit}
       />
+      <RankingList
+        isOpen={rankOpen}
+        setRankOpen={setRankOpen}
+        lists={lists}
+        setLists={setLists}
+      />
       <RandomsSpirits
         CardsNumber={CardsNumber}
         setCardsNumber={setCardsNumber}
         cards={cards}
         generatorSpirit={generatorSpirit}
+        setRankOpen={setRankOpen}
       />
       <Smoke />
 

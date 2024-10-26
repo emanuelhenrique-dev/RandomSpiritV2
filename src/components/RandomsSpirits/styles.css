@@ -2,7 +2,15 @@
 
 }
 
-.RandomsSpirits .title{
+.RandomsSpirits .title-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 30px;
+  gap: 5px;
+}
+
+.RandomsSpirits .title-container .title{
   color: #C8AE78;
   font-family: Mantinia;
   font-size: 3.2rem;
@@ -14,7 +22,30 @@
   text-align: center;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
-  padding-bottom: 30px;
+}
+
+.RandomsSpirits .title-container .open-rankList {
+  width: 36px;
+  height: 36px;
+  border: none;
+  border-radius: 50%;
+  background-color: transparent;
+  background-image: url(../../util/Vector.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  cursor: pointer;
+  animation: popup 1.8s alternate-reverse infinite;
+}
+
+@keyframes popup {
+  100% {
+    transform: scale(1.1);
+    filter: brightness(1.3);
+  }
+  0% {
+    transform: scale(1);
+    filter: brightness(1);
+  }
 }
 
 .RandomsSpirits .container-spirits {

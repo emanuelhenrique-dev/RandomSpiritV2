@@ -12,7 +12,13 @@ import { //Temporario pra teste  //
 
 export const RandomsSpirits = (props) => {
 
-  const {setCardsNumber, CardsNumber, cards, generatorSpirit} = props;
+  const {
+    setCardsNumber, 
+    CardsNumber, 
+    cards, 
+    generatorSpirit,
+    setRankOpen
+  } = props;
   
 // array de spirit padrao de entrada
   const [spirits, setSpirits] = useState(
@@ -57,7 +63,10 @@ export const RandomsSpirits = (props) => {
 
   return (
     <div className='RandomsSpirits'>
-      <h3 className='title' >Spirit Ashes</h3>
+      <div className='title-container'>
+        <h3 className='title' >Spirit Ashes</h3>
+        <button className='open-rankList' onClick={()=>setRankOpen(true)}></button>
+      </div>     
       <div className="container-spirits">
       { spirits.slice(0, CardsNumber).map((card, index) => <RandomCards key={index} id = {index} name={card.name} img={card.img} url= {card.Link} click={() => changeNumberCard(-1)} refresh = {refresh} />)}
         <div className='button-container'>
