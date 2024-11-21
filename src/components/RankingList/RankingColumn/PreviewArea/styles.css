@@ -1,0 +1,33 @@
+.PreviewArea {
+  position: relative;
+  height: 120px;
+  width: 0px;
+  border-radius: 25px;
+  
+
+  border-radius: 7px;
+  border-top: 2px solid var(--red, #818181);
+  border-bottom: 2px solid var(--red, #818181);
+}
+
+/*correção do gap do primeiro preview*/
+.PreviewArea:not(.PreviewArea.open):nth-child(1){
+  margin-right: -4px; 
+}
+.PreviewArea.open:nth-child(1){
+  margin-left: 0; 
+}
+
+.PreviewArea.open {
+  transition: all 0.2s ease;
+  width: 108px;
+  margin-inline: 4px;
+}
+
+.PreviewArea img {
+  user-select: none;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

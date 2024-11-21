@@ -1,0 +1,41 @@
+.ScrollButton {
+  display: none;
+  width: 80%;
+  height: 56px;
+  position: absolute;
+  top: 26px;
+  left: 12%;
+  z-index: 100;
+
+  border-radius: 110px 110px 0px 0px;
+  background: rgba(255, 255, 255, 0.493) url(/public/up.png);
+  backdrop-filter: blur(1.2999999523162842px);
+  background-repeat: no-repeat;
+  background-position: center;
+  animation: piscar 5s infinite;
+}
+
+
+.ScrollButton.down {
+  top: auto;
+  bottom: -26px;
+  border-radius: 0px 0px 110px 110px ;
+  transform: scaleY(-1);
+}
+
+.ScrollButton.show {
+  display: block;
+}
+
+
+@keyframes piscar {
+  0% {
+      opacity: 1; /* Totalmente visível */
+  }
+  50% {
+      opacity: 0.5; /* Invisível (piscando) */
+  }
+  100% {
+      opacity: 1; /* Retorna a visibilidade */
+  }
+}

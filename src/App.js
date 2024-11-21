@@ -1,5 +1,5 @@
 import './App.css';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 import { backmusic } from './assets/assets';
 import { GeneratorMenu } from './components/GeneratorMenu';
@@ -8,15 +8,24 @@ import { RankingList } from './components/RankingList';
 import { Smoke } from './components/Smoke';
 import { loadLists } from './util/spiritList';
 
-const data = loadLists();
+const defaultDataS = loadLists();
 
 export function App() {
   const [cards, setCards] = useState([]);
   const [CardsNumber, setCardsNumber] = useState(1);
   const [dlcActive, setDlcActive] = useState(0);
   const [selectedButtons, setSelectedButtons] = useState(['A']);
-  const [lists, setLists] = useState(data);
+  const [lists, setLists] = useState(() => {
+    const savedData = localStorage.getItem('ListSpirits');
+    return savedData ? JSON.parse(savedData) : defaultDataS;
+  });
   const [rankOpen, setRankOpen] = useState(false);
+
+  useEffect(() => {
+    //verificar o storage data
+    localStorage.setItem('ListSpirits', JSON.stringify(lists));
+    console.log('Storage data mudado');
+  }, [lists]);
 
   //Gerar um spirit aleatório e filtrando
   const generatorSpirit = () => {
